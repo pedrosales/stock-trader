@@ -1,5 +1,5 @@
 <template>
-  <h1>Stock Trader</h1>
+  <h1>Header</h1>
 </template>
 
 <script>
