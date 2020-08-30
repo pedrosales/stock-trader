@@ -13,8 +13,7 @@ export default {
         buyStock({
             commit
         }, order) {
-            commit();
-            console.log(order);
+            commit("buyStock", order);
         },
         initStocks({
             commit
