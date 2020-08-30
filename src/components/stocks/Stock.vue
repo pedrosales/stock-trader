@@ -4,7 +4,7 @@
       <v-card-title class="headline">
         <strong>
           {{ stock.name }}
-          <small>(Price: {{ stock.price }})</small>
+          <small>(Price: {{ stock.price | currency }})</small>
         </strong>
       </v-card-title>
     </v-card>

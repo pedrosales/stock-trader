@@ -12,7 +12,7 @@
     <v-divider class="my-4"></v-divider>
     <p class="display-1">
       <strong>Funds:</strong>
-      {{ funds }}
+      {{ funds | currency }}
     </p>
   </div>
 </template>
