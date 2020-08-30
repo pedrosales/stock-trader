@@ -20,7 +20,7 @@
           <v-list-item @click="saveData">
             <v-list-item-title>Save Data</v-list-item-title>
           </v-list-item>
-          <v-list-item>
+          <v-list-item @click="getData">
             <v-list-item-title>Load Data</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -42,13 +42,16 @@ export default {
     },
   },
   methods: {
-    ...mapActions(["randomizeStocks"]),
+    ...mapActions(["randomizeStocks", "getData"]),
     endDay() {
       this.randomizeStocks();
     },
     saveData() {
       const { funds, stockPortifolio, stocks } = this.$store.getters;
       this.$http.put("data.json", { funds, stockPortifolio, stocks });
+    },
+    loadData() {
+      this.getData();
     },
   },
 };
